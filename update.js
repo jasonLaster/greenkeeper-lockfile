@@ -24,10 +24,6 @@ module.exports = function update () {
     )
   }
 
-  if (!info.correctBuild) {
-    return console.error('This build should not update the lockfile. It could be a PR, not a branch build.')
-  }
-
   if (!info.branchName) {
     return console.error('No branch details set, so assuming not a Greenkeeper branch')
   }
